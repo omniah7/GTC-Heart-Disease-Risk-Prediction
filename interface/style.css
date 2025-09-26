@@ -1,0 +1,117 @@
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f8ff;
+    color: #1a1a1a;
+}
+
+/* Navbar */
+nav {
+background-color: #003366; 
+padding: 10px 20px;
+display: flex;
+align-items: center;
+}
+
+nav .logo {
+display: flex;
+align-items: center;
+}
+
+nav img {
+height: 65px;  
+width: auto;
+margin-right: 10px;
+}
+
+nav span {
+color: white;
+font-size: 20px;
+font-weight: bold;
+}
+
+
+/* Cards */
+.card {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.card.active {
+    display: block;
+}
+
+h2 {
+    color: #003366;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #0055aa;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #003366;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* Result Message */
+.result {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: none;
+}
+
+.result.success {
+    background-color: #e6ffed;
+    color: #006600;
+    border: 1px solid #00cc66;
+}
+
+.result.danger {
+    background-color: #ffe6e6;
+    color: #990000;
+    border: 1px solid #ff4d4d;
+}
+
+.result.error {
+    background-color: #fff3e6;
+    color: #b34700;
+    border: 1px solid #ff944d;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}

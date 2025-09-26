@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Risk Checker</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+    <img src="Logo.png" alt="Heart Checker Logo">
+    <span>Heart Checker</span>
+    </div>
+  </nav>
+
+  <!-- Landing Card -->
+  <div id="landingCard" class="card active">
+    <h2>Welcome to Heart Risk Checker</h2>
+    <p>
+      Heart disease is one of the leading causes of death worldwide.  
+      Early detection and awareness can help reduce risks and save lives.  
+      Use our tool to quickly check your risk level.
+    </p>
+    <button onclick="goToForm()">Check Yourself</button>
+  </div>
+
+  <!-- Form Card -->
+  <div id="formCard" class="card">
+    <h2>Enter Your Information</h2>
+    <!-- Result Message (now on top) -->
+    <div id="result" class="result"></div>
+
+    <form id="riskForm">
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" id="age" required>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <select id="sex" required>
+          <option value="">-- Select --</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="cp">Chest Pain Type</label>
+        <select id="cp" required>
+          <option value="">-- Select --</option>
+          <option value="0">Typical Angina</option>
+          <option value="1">Atypical Angina</option>
+          <option value="2">Non-anginal Pain</option>
+          <option value="3">Asymptomatic</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="trestbps">Resting Blood Pressure (mm Hg)</label>
+        <input type="number" id="trestbps" required>
+      </div>
+
+      <div class="form-group">
+        <label for="chol">Cholesterol (mg/dl)</label>
+        <input type="number" id="chol" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fbs">Fasting Blood Sugar > 120 mg/dl</label>
+        <select id="fbs" required>
+          <option value="">-- Select --</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="restecg">Resting ECG</label>
+        <select id="restecg" required>
+          <option value="">-- Select --</option>
+          <option value="0">Normal</option>
+          <option value="1">ST-T Abnormality</option>
+          <option value="2">Left Ventricular Hypertrophy</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="thalach">Max Heart Rate Achieved</label>
+        <input type="number" id="thalach" required>
+      </div>
+
+      <div class="form-group">
+        <label for="exang">Exercise Induced Angina</label>
+        <select id="exang" required>
+          <option value="">-- Select --</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="oldpeak">ST Depression (Oldpeak)</label>
+        <input type="number" step="0.1" id="oldpeak" required>
+      </div>
+
+      <div class="form-group">
+        <label for="slope">Slope of ST Segment</label>
+        <select id="slope" required>
+          <option value="">-- Select --</option>
+          <option value="0">Upsloping</option>
+          <option value="1">Flat</option>
+          <option value="2">Downsloping</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="ca">Number of Major Vessels (0-3)</label>
+        <input type="number" min="0" max="3" id="ca" required>
+      </div>
+
+      <div class="form-group">
+        <label for="thal">Thalassemia</label>
+        <select id="thal" required>
+          <option value="">-- Select --</option>
+          <option value="1">Normal</option>
+          <option value="2">Fixed Defect</option>
+          <option value="3">Reversible Defect</option>
+        </select>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" onclick="goBack()">Back</button>
+        <button type="submit">Check Now</button>
+      </div>
+    </form>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
