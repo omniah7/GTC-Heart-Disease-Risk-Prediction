@@ -2,12 +2,15 @@ from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) 
+MODEL_PATH = os.path.join(BASE_DIR, "data", "heart_disease_model.pkl")
 
-model = joblib.load(r"c:\PYTHON\GTC\GTC-Heart-Disease-Risk-Prediction\data\heart_disease_model.pkl")
+model = joblib.load(MODEL_PATH)
 
 @app.route("/predict", methods=["POST"])
 def predict():
