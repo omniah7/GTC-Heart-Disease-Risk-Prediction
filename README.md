@@ -60,8 +60,8 @@ The trained model is deployed via a **Flask web application** with a simple fron
 
 ### 1. Clone the Repository
 ```bash
-git clone <repo-link>
-cd heart-disease-risk-prediction
+git clone https://github.com/omniah7/GTC-Heart-Disease-Risk-Prediction
+cd GTC-Heart-Disease-Risk-Prediction
 ```
 
 ### 2. Install Dependencies
@@ -71,7 +71,7 @@ pip install -r requirements.txt
 
 ### 3. Run the Flask App
 ```bash
-python app.py
+python 4-Deployment.py
 ```
 - Open in browser: `http://127.0.0.1:5000`  
 
@@ -84,15 +84,15 @@ python app.py
 │   ├── clean_data.csv  
 │   ├── engineered_data.csv  
 │   └── heart_disease_model.pkl  
-├── notebooks/  
-│   ├── 1-data-preparation.ipynb  
-│   ├── 2-EDA-and-feature-engineering.ipynb  
-│   ├── 3-model-training-and-validation.ipynb  
-│   └── 4-deployment.ipynb  
-├── app/  
-│   ├── app.py (Flask backend)  
-│   ├── templates/ (HTML files)  
-│   ├── static/ (CSS & JS files)  
+├── interface/
+│   ├── logo.png 
+│   ├── index.html 
+│   ├── script.js  
+│   └── style.css
+├── 1-data-preparation.ipynb  
+├── 2-EDA-and-feature-engineering.ipynb  
+├── 3-model-training-and-validation.ipynb  
+├── 4-Deployment.py  
 ├── requirements.txt  
 └── README.md  
 ```
